@@ -294,19 +294,7 @@ with tab_simple:
             price = float(ensemble_pred[0])
             st.success(f"Estimated Sale Price: **${price:,.0f}**")
 
-            with st.expander("🔍 Model-wise Predictions"):
-                display_vals = {}
-                if model_wise["XGBoost"] is not None:
-                    display_vals["XGBoost"] = f"${model_wise['XGBoost']:,.0f}"
-                else:
-                    display_vals["XGBoost"] = "N/A"
-
-                if model_wise["LightGBM"] is not None:
-                    display_vals["LightGBM"] = f"${model_wise['LightGBM']:,.0f}"
-                else:
-                    display_vals["LightGBM"] = "N/A"
-
-                st.json(display_vals)
+            
 
 
 
